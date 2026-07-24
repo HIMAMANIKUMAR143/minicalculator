@@ -1,89 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>calculator</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
 
     <style>
-      .calci {
-        height: 750px;
-        width: 480px;
-        border: 10px;
-        border-radius: 20px;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-        background-color: black;
-      }
-      .number {
-        height: 20%;
-        width: 470px;
-        border-radius: 60px;
-        font-size: 50px;
-        background-color: whitesmoke;
-      }
-      button {
-        font-size: 60px;
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            background:skyblue;
+            padding:20px;
+        }
 
-        padding: 15px;
-        cursor: pointer;
-        border-radius: 50px;
-        background-color: orange;
-      }
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: skyblue;
-      }
-      .naveen {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
-        cursor: none;
-      }
-      button:hover {
-        color: white;
-      }
+        .calci{
+            width:100%;
+            max-width:480px;
+            background:black;
+            border-radius:20px;
+            padding:20px;
+        }
+
+        .number{
+            width:100%;
+            height:80px;
+            border:none;
+            border-radius:20px;
+            padding:15px;
+            font-size:2rem;
+            outline:none;
+        }
+
+        .naveen{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:10px;
+            margin-top:20px;
+        }
+
+        button{
+            width:100%;
+            aspect-ratio:1/1;
+            border:none;
+            border-radius:50%;
+            background:orange;
+            font-size:2rem;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#ff9800;
+            color:white;
+        }
+
+        @media (max-width:480px){
+
+            .calci{
+                padding:15px;
+            }
+
+            .number{
+                height:70px;
+                font-size:1.5rem;
+            }
+
+            button{
+                font-size:1.5rem;
+            }
+
+            .naveen{
+                gap:8px;
+            }
+
+        }
     </style>
-  </head>
-  <body>
+
+</head>
+<body>
+
     <div class="calci">
-      <br />
 
-      <input
-        type="text"
-        class="number"
-        for="naveen"
-        placeholder="enter a value"
-      />
-      <br />
-      <br />
-      <div class="naveen">
-        <button>c</button>
-        <button>(</button>
-        <button>)</button>
-        <button>-</button>
-        <button>9</button>
-        <button>8</button>
-        <button>7</button>
-        <button>*</button>
-        <button>6</button>
-        <button>5</button>
-        <button>4</button>
-        <button>+</button>
-        <button>3</button>
-        <button>2</button>
-        <button>1</button>
-        <button>/</button>
+        <input
+            type="text"
+            class="number"
+            placeholder="Enter a value"
+        >
 
-        <button>0</button>
-        <button>.</button>
-        <button>%</button>
-        <button>=</button>
-      </div>
-      <br />
+        <div class="naveen">
+
+            <button>C</button>
+            <button>(</button>
+            <button>)</button>
+            <button>-</button>
+
+            <button>9</button>
+            <button>8</button>
+            <button>7</button>
+            <button>*</button>
+
+            <button>6</button>
+            <button>5</button>
+            <button>4</button>
+            <button>+</button>
+
+            <button>3</button>
+            <button>2</button>
+            <button>1</button>
+            <button>/</button>
+
+            <button>0</button>
+            <button>.</button>
+            <button>%</button>
+            <button>=</button>
+
+        </div>
+
     </div>
+
     <script src="/project1/calculator.js"></script>
-  </body>
+
+</body>
 </html>
